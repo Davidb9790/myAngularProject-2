@@ -1,0 +1,45 @@
+<h1>Welcome to the page !</h1>
+
+<!-- 5. Displaying Message Dynamically -->
+<label for="">5.</label>
+<h2>{{msg}}</h2>
+
+<!-- 6. Assignment Display Sum of two values -->
+<br>
+<label for="">6.</label>
+<app-test></app-test>
+    <p>Value of a: {{a}}</p>
+    <p>Value of b: {{b}}</p>
+    <p>Addition is: {{ans}}</p>
+<br>
+
+
+<!-- 8. Property Binding -->
+<label for="">8.</label>
+<br>
+<input type="text" value="{{inputVal}}" disabled="{{isDisabled}}"/>
+<br><br>
+<input type="text" [value]="inputVal" [disabled]="isDisabled"/>
+<br>
+<!-- properties inside square brackets are identified as Target Property-->
+
+<!-- 9. Assignment Property binding with image tag -->
+<br>
+<label for="">9.</label>
+<img [src]="imgSrc" alt=""/>
+<br>
+
+<!--  10. Event biding with a Click Event -->
+<br>
+<label for="">10.</label>
+<button type="submit" (click)="display('Welcome')">Click</button>
+<br>
+
+<!-- 11. Binding Other Mouse Related Events -->
+<br>
+<label for="">11.</label>
+<h1 (dblclick)="incrementOnDoubleClick()">Increment - {{dblClick}}</h1>
+<h1 (mouseover)="incrementOnOver()">Increment - {{onOver}}</h1>
+<h1 (mouseleave)="incrementOnLeave()">Increment - {{onLeave}}</h1>
+
+<br>
