@@ -26,12 +26,14 @@
 <!-- 9. Assignment Property binding with image tag -->
 <br>
 <label for="">9.</label>
+<br>
 <img [src]="imgSrc" alt=""/>
 <br>
 
 <!--  10. Event biding with a Click Event -->
 <br>
 <label for="">10.</label>
+<br>
 <button type="submit" (click)="display('Welcome')">Click</button>
 <br>
 
@@ -41,5 +43,53 @@
 <h1 (dblclick)="incrementOnDoubleClick()">Increment - {{dblClick}}</h1>
 <h1 (mouseover)="incrementOnOver()">Increment - {{onOver}}</h1>
 <h1 (mouseleave)="incrementOnLeave()">Increment - {{onLeave}}</h1>
+<h1 (drag)="incrementOnDrag()">Increment - {{onDrag}}</h1>
+<h1 (dragover)="incrementOnDragOver()">Increment - {{onDragOver}}</h1>
+<br>
 
+<!-- 12. Binding Keyboard Events -->
+<label for="">12.</label>
+<br>
+<input type="text" (keypress)="onKeyPress()"/>
+<br>
+<br>
+<input type="text" (keypress)="onKeyDown()"/>
+<br>
+<!-- 13. $event object -->
+<br>
+<label for="">13.</label>
+<br>
+<input type="text" (keyup)="eventObject($event)"/>
+<br>
+<!-- 14. Assignment (checking shift key status) -->
+<br>
+<label for="">14.</label>
+
+<!-- <br>
+<input type="text" (keydown.shift.y)="isShift()"> -->
+
+<br>
+<input type="text" (keydown)="isShift($event)">
+<br>
+<!-- (keydown.shift.y)="isShift()" not a part of DOM but a part of event binding in Angular Framework.
+Angular just provides a way to bind the events & change teh DOM behavior 
+Key event binding-->
+
+<!-- 15. Two Way Binding ngModel -->
+<br>
+<label for="">15.</label>
+<br>
+<input type="text" [(ngModel)]="staticInput"/>
+<br><br>
+<input type="text" [(ngModel)]="dynamicInput"/>
+<h1>{{dynamicInput}}</h1>
+<br>
+<!-- 16. Assignment Two Way Binding - Get input field value on button -->
+<br>
+<label for="">16.</label>
+<br>
+<input type="text" [(ngModel)]="inputValForButton"/>
+<br><br>
+<button typq="submit" (click)="show()">Show</button>
+<h1>{{dynamicVal}}</h1>
 <br>
