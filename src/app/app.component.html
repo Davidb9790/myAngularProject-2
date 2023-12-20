@@ -1,95 +1,455 @@
 <h1>Welcome to the page !</h1>
 
 <!-- 5. Displaying Message Dynamically -->
-<label for="">5.</label>
-<h2>{{msg}}</h2>
+<div class="container">
+  <label for="">5. Displaying Message Dynamically</label>
+  <h2>{{ msg }}</h2>
+</div>
 
 <!-- 6. Assignment Display Sum of two values -->
-<br>
-<label for="">6.</label>
-<app-test></app-test>
-    <p>Value of a: {{a}}</p>
-    <p>Value of b: {{b}}</p>
-    <p>Addition is: {{ans}}</p>
-<br>
-
+<br />
+<div class="container">
+  <label for="">6. Assignment Display Sum of two values</label>
+  <app-test></app-test>
+  <p>Value of a: {{ a }}</p>
+  <p>Value of b: {{ b }}</p>
+  <p>Addition is: {{ ans }}</p>
+</div>
+<br />
 
 <!-- 8. Property Binding -->
-<label for="">8.</label>
-<br>
-<input type="text" value="{{inputVal}}" disabled="{{isDisabled}}"/>
-<br><br>
-<input type="text" [value]="inputVal" [disabled]="isDisabled"/>
-<br>
+<div class="container">
+  <label for="">8. Property Binding</label>
+  <br />
+  <input type="text" value="{{ inputVal }}" disabled="{{ isDisabled }}" />
+  <br /><br />
+  <input type="text" [value]="inputVal" [disabled]="isDisabled" />
+</div>
+<br />
 <!-- properties inside square brackets are identified as Target Property-->
 
 <!-- 9. Assignment Property binding with image tag -->
-<br>
-<label for="">9.</label>
-<br>
-<img [src]="imgSrc" alt=""/>
-<br>
+<br />
+<div class="containerForImg">
+  <label for="">9. Assignment Property binding with image tag</label>
+  <br />
+  <img [src]="imgSrc" alt="" />
+  <br />
+</div>
 
 <!--  10. Event biding with a Click Event -->
-<br>
-<label for="">10.</label>
-<br>
-<button type="submit" (click)="display('Welcome')">Click</button>
-<br>
+<br />
+<div class="container">
+  <label for="">10.Event biding with a Click Event</label>
+  <br />
+  <button type="submit" (click)="display('Welcome')">Click</button>
+  <br />
+</div>
 
 <!-- 11. Binding Other Mouse Related Events -->
-<br>
-<label for="">11.</label>
-<h1 (dblclick)="incrementOnDoubleClick()">Increment - {{dblClick}}</h1>
-<h1 (mouseover)="incrementOnOver()">Increment - {{onOver}}</h1>
-<h1 (mouseleave)="incrementOnLeave()">Increment - {{onLeave}}</h1>
-<h1 (drag)="incrementOnDrag()">Increment - {{onDrag}}</h1>
-<h1 (dragover)="incrementOnDragOver()">Increment - {{onDragOver}}</h1>
-<br>
+<br />
+<div class="container">
+  <label for="">11.Binding Other Mouse Related Events </label>
+  <h1 (dblclick)="incrementOnDoubleClick()">Increment - {{ dblClick }}</h1>
+  <h1 (mouseover)="incrementOnOver()">Increment - {{ onOver }}</h1>
+  <h1 (mouseleave)="incrementOnLeave()">Increment - {{ onLeave }}</h1>
+  <h1 (drag)="incrementOnDrag()">Increment - {{ onDrag }}</h1>
+  <h1 (dragover)="incrementOnDragOver()">Increment - {{ onDragOver }}</h1>
+  <br />
+</div>
 
 <!-- 12. Binding Keyboard Events -->
-<label for="">12.</label>
-<br>
-<input type="text" (keypress)="onKeyPress()"/>
-<br>
-<br>
-<input type="text" (keypress)="onKeyDown()"/>
-<br>
+<br />
+<div class="container">
+  <label for="">12. Binding Keyboard Events</label>
+  <br />
+  <input type="text" (keypress)="onKeyPress()" />
+  <br />
+  <br />
+  <input type="text" (keypress)="onKeyDown()" />
+  <br />
+</div>
 <!-- 13. $event object -->
-<br>
-<label for="">13.</label>
-<br>
-<input type="text" (keyup)="eventObject($event)"/>
-<br>
+
+<br />
+
+<div class="container">
+  <label for="">13. $event object</label>
+  <br />
+  <input type="text" (keyup)="eventObject($event)" />
+  <br />
+</div>
+
 <!-- 14. Assignment (checking shift key status) -->
-<br>
-<label for="">14.</label>
-
-<!-- <br>
-<input type="text" (keydown.shift.y)="isShift()"> -->
-
-<br>
-<input type="text" (keydown)="isShift($event)">
-<br>
-<!-- (keydown.shift.y)="isShift()" not a part of DOM but a part of event binding in Angular Framework.
-Angular just provides a way to bind the events & change teh DOM behavior 
+<br />
+<div class="container">
+  <label for="">14. Assignment (checking shift key status)</label>
+  <!-- <br> <input type="text" (keydown.shift.y)="isShift()"> -->
+  <br />
+  <input type="text" (keydown)="isShift($event)" />
+  <br />
+  <!-- (keydown.shift.y)="isShift()" not a part of DOM but a part of event binding in Angular Framework.
+Angular just provides a way to bind the events & change teh DOM behavior
 Key event binding-->
+</div>
 
 <!-- 15. Two Way Binding ngModel -->
-<br>
-<label for="">15.</label>
-<br>
-<input type="text" [(ngModel)]="staticInput"/>
-<br><br>
-<input type="text" [(ngModel)]="dynamicInput"/>
-<h1>{{dynamicInput}}</h1>
-<br>
+<br />
+<div class="container">
+  <label for="">15. Two Way Binding ngModel</label>
+  <br />
+  <input type="text" [(ngModel)]="staticInput" />
+  <br /><br />
+  <input type="text" [(ngModel)]="dynamicInput" />
+  <h1>{{ dynamicInput }}</h1>
+</div>
+
 <!-- 16. Assignment Two Way Binding - Get input field value on button -->
-<br>
-<label for="">16.</label>
-<br>
-<input type="text" [(ngModel)]="inputValForButton"/>
-<br><br>
-<button typq="submit" (click)="show()">Show</button>
-<h1>{{dynamicVal}}</h1>
-<br>
+<br />
+<div class="container">
+  <label for="">16. Assignment Two Way Binding</label>
+  <label for="">Get input field value on button</label>
+  <br />
+  <input type="text" [(ngModel)]="inputValForButton" />
+  <br /><br />
+  <button type="submit" (click)="show()">Show</button>
+  <h1>{{ dynamicVal }}</h1>
+  <br />
+</div>
+
+<!-- 17. Assignment Creating counter -->
+<br />
+<div class="container">
+  <br />
+  <label for="">17. Assignment Creating counter</label>
+  <h1 class="counterExample">Counter Example</h1>
+  <div class="btn-container">
+    <br />
+    <button class="btn-class" (click)="counter('decr')">--</button>
+    <p class="countClass">{{ count }}</p>
+    <button class="btn-class" (click)="counter('incr')">++</button>
+    <br />
+  </div>
+</div>
+
+<!-- 20. Structural directives
+    *ngIf -->
+<br />
+<div class="container">
+  <label for="">20. Structural directives *ngIf</label>
+  <div *ngIf="displayViaNgIf">Structural Directive Example</div>
+  <br />
+  <h1 *ngIf="num > 0">{{ num }} is greater than 0</h1>
+  <h1 *ngIf="num == 0">{{ num }} is 0</h1>
+  <h1 *ngIf="num < 0">{{ num }} is less than 0</h1>
+  <br />
+</div>
+<!-- 21. Assignment- Implement show & hide functionality for *ngIf -->
+<br />
+<div class="container">
+  <label for=""
+    >21. Assignment- Implement show & hide functionality for *ngIf</label
+  >
+  <br />
+  <br />
+  <button (click)="showElement()">Show</button>
+  <!-- another way to do it -->
+  <!-- remove the showElement() in .ts file -->
+  <!--update (click)= "displayElement = !displayElement" -->
+  <br /><br />
+  <div *ngIf="displayElement">This is the division element</div>
+</div>
+<br />
+<div class="container">
+  <label for="">22. Structural Directives *ngFor</label>
+  <div *ngFor="let value of fullStackDev">
+    <!-- 'value' can be any name
+         'fullStackDev' has to be the name of the variable to iterate through -->
+    <ul>
+      <li>{{ value.id }}</li>
+      <li>{{ value.name }}</li>
+    </ul>
+  </div>
+</div>
+<br />
+
+<div class="container">
+  <label for=""
+    >23. Assignment- Displaying list items on button click using *ngIf &
+    *ngFor</label
+  >
+  <button (click)="showListItems = !showListItems">Show List</button>
+  <ul *ngIf="showListItems">
+    <li *ngFor="let item of listItems">
+      {{ item.name }} is {{ item.age }} years old
+    </li>
+    <!-- <li *ngFor="let item of listItems">{{ item.age }}</li> -->
+  </ul>
+</div>
+<br />
+<div class="container">
+  <label for="">24. Structural Directives *ngSwitch </label>
+  <h1>Age Variable</h1>
+  <div [ngSwitch]="age">
+    <p *ngSwitchCase="10">The person's age is 10 years old</p>
+    <p *ngSwitchCase="20">The person's age is 20 years old</p>
+    <p *ngSwitchCase="30">The person's age is 30 years old</p>
+    <p *ngSwitchDefault>The person's age is {{ age }} years old</p>
+  </div>
+
+  <h1>Person Object</h1>
+  <div [ngSwitch]="personObject.age">
+    <p *ngSwitchCase="10">The person's age is 10 years old</p>
+    <p *ngSwitchCase="20">The person's age is 20 years old</p>
+    <p *ngSwitchCase="30">The person's age is 30 years old</p>
+    <p *ngSwitchDefault>The person's age is {{ personObject.age }} years old</p>
+  </div>
+</div>
+<br />
+
+<div
+  class="assignmentForNgSwitch"
+  [ngStyle]="{
+    border: isEligible === true ? '1px solid #6be619' : '1px solid tomato'
+  }"
+>
+  <label for=""
+    >25. Assignment - Implement age validation functionality using
+    *ngSwitch</label
+  >
+  <br /><br />
+  <label>Enter your age:</label>
+  <input type="text" (input)="checkEligibility()" [(ngModel)]="personsAge" />
+  <div [ngSwitch]="isEligible">
+    <p *ngSwitchCase="true">You are eligible to vote</p>
+    <p *ngSwitchDefault="false">You are not eligible to vote</p>
+  </div>
+</div>
+
+<div class="container">
+  <label for="">26. Attribute Directives [ngClass]</label>
+  <br /><br />
+  <p [ngClass]="'updateStyles italicText letterFormat'">
+    This is an example of ngClass directive
+  </p>
+  <br />
+  <input
+    type="text"
+    placeholder="Enter Text Here.."
+    (input)="textInput($event)"
+    [ngClass]="{ txt: hasText }"
+  />
+  <br />
+</div>
+<br />
+
+<div class="container ngClassAssignment">
+  <label for="">27. Assignment ngClass</label>
+  <br />
+  <button (click)="toggleMode()" class="toggleButton">
+    {{
+      colorMode === "lightMode" ? "Switch To Dark Mode" : "Switch To Light Mode"
+    }}
+  </button>
+  <br />
+  <div class="box" [ngClass]="colorMode">
+    <h1>Light Mode</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, totam
+      odio sapiente quos non exercitationem ea explicabo asperiores officiis,
+      error laudantium ex officia quam eaque adipisci dicta quae voluptate.
+    </p>
+  </div>
+  <div class="box" [ngClass]="colorMode">
+    <h1>Dark Mode</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, totam
+      odio sapiente quos non exercitationem ea explicabo asperiores officiis,
+      error laudantium ex officia quam eaque adipisci dicta quae voluptate.
+    </p>
+  </div>
+</div>
+<br />
+
+<div class="container">
+  <label for="">28. Attribute Directives ngStyle</label>
+  <br />
+  <div class="ngStyleClass">
+    <p [ngStyle]="{ color: 'maroon', 'font-size': '25px' }">
+      Example of [ngStyle] directive/p>
+    </p>
+    <p
+      [ngStyle]="{
+        color: 'colorVal',
+        'font-size': 'fontSize',
+        'font-style': isItalic
+      }"
+    >
+      Example of [ngStyle] directive/p>
+    </p>
+    <p [ngStyle]="applyVal">Example of [ngStyle] directive/p></p>
+  </div>
+</div>
+
+<br />
+<div class="container">
+  <label for=""
+    >29. Assignment Changing the color of input field using [ngStyle]</label
+  >
+  <br />
+  <h1>Submit Form</h1>
+  <form *ngIf="!formSubmitted">
+    <div class="form-group">
+      <label class="submitFormLabel" for="name">Name</label>
+      <input
+        class="inputFormLabel"
+        type="text"
+        name="name"
+        [(ngModel)]="inputName"
+        [ngStyle]="{ 'background-color': inputName ? 'lightgreen' : 'pink' }"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label class="submitFormLabel" for="email">Email</label>
+      <input
+        class="inputFormLabel"
+        type="text"
+        name="email"
+        [(ngModel)]="inputEmail"
+        [ngStyle]="{ 'background-color': emailIsValid ? 'lightgreen' : 'pink' }"
+        (input)="checkEmailValidation(inputEmail)"
+        required
+      />
+    </div>
+  </form>
+  <button class="buttonFormLabel" type="submit" (click)="showMessage()">
+    Submit
+  </button>
+  <p *ngIf="formSubmitted">Form is successfully submitted</p>
+</div>
+<br />
+<br />
+
+<div class="container">
+  <label for=""> 30. Grouping elements with ng-container </label>
+  <h3>Normal Division</h3>
+  <div>
+    <p>Item 1</p>
+    <p>Item 2</p>
+    <p>Item 3</p>
+    <p>Item 4</p>
+  </div>
+  <hr />
+  <h3>ng-container</h3>
+  <ng-container>
+    <p>Item 1</p>
+    <p>Item 2</p>
+    <p>Item 3</p>
+    <p>Item 4</p>
+  </ng-container>
+  <br />
+  <div *ngFor="let subject of subjectList">
+    <span class="ngContainerSpan">Subject Code : {{ subject.subCode }}</span>
+    <span class="ngContainerSpan">Subject Name : {{ subject.name }}</span>
+  </div>
+</div>
+<br />
+<div class="container">
+  <label for=""> 31. HTML Templates with ng-template </label>
+  <ng-container *ngIf="isAuthorized; else notAuthorized">
+    <p>Authorized User</p>
+  </ng-container>
+  <ng-template #notAuthorized>
+    <h2>Not Authorized</h2>
+  </ng-template>
+  <span
+    >Note: if you remove items in array, different message appears below.</span
+  >
+
+  <div>
+    <ng-container *ngIf="listItemsArray.length > 0; else noItems">
+      <ul>
+        <li *ngFor="let items of listItemsArray">{{ items }}</li>
+      </ul>
+    </ng-container>
+    <ng-template #noItems>
+      <p>No Items to display</p>
+    </ng-template>
+  </div>
+</div>
+<br />
+<div class="container">
+  <label for=""
+    >33. Assignment Displaying message if the input field remains empty
+  </label>
+  <div class="box33">
+    <div class="input-container">
+      <input type="text" [(ngModel)]="user" />
+      <label for="">Full Name</label>
+    </div>
+    <ng-container *ngIf="user !== ''; else notValid"> </ng-container>
+    <ng-template #notValid>
+      <h3 class="ngTemplateH3">Please enter your name</h3>
+    </ng-template>
+  </div>
+</div>
+
+<br />
+<div class="container">
+  <label for="">34. Rendering templates with ngTemplateOutlet Part 1</label>
+  <!-- <ng-template #show let-msg="showMessageTest">
+    <p style="font-size: 20px">{{ msg }}</p>
+  </ng-template>
+  <ng-container
+    *ngTemplateOutlet="
+      show;
+      context: { showMessageTest: 'This is the context message' }
+    "
+  ></ng-container> -->
+</div>
+<br />
+<div class="container">
+  <label for="">35. Rendering templates with ngTemplateOutlet Part 2</label>
+  <br />
+  <ng-template #employeeTable let-emp>
+    <table
+      border="1"
+      style="
+        text-align: center;
+        font-size: 20px;
+        margin: 0 auto;
+        padding: 15px;
+        width: 30%;
+      "
+    >
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
+      <tr *ngFor="let e of emp">
+        <td>{{ e.id }}</td>
+        <td>{{ e.name }}</td>
+        <td>{{ e.salary }}</td>
+      </tr>
+    </table>
+  </ng-template>
+  <ng-container
+    *ngTemplateOutlet="employeeTable; context: { $implicit: employees }"
+  ></ng-container>
+</div>
+<br />
+<!-- 
+
+<div class="container">
+  <label for=""></label>
+</div>
+<br />
+<div class="container">
+  <label for=""></label>
+</div>
+<br />
+<div class="container">
+  <label for=""></label>
+</div> -->
